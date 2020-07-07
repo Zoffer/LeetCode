@@ -9,15 +9,18 @@
  * @param {number[]} heights
  * @return {number}
  */
-var largestRectangleArea = function(heights) {
-    let max = 0, stack = [-1];
-    [...heights, 0].forEach((h, i, array) => {
-        while (array[stack[0]] > h) {
-            max = Math.max(max, array[stack.shift()] * (i - stack[0] - 1));
+var largestRectangleArea = function (heights) {
+    let maxArea = 0, stack = [-1];
+    [...heights, 0].forEach((height, i) => {
+        let last = stack.length - 1;
+        while (heights[stack[last]] > height) {
+            let h = heights[stack.pop()];
+            let w = i - stack[--last] - 1
+            maxArea = Math.max(maxArea, h * w);
         }
-        stack.unshift(i);
+        stack.push(i);
     });
-    return max;
+    return maxArea;
 };
 // @lc code=end
 export default largestRectangleArea;
