@@ -1,0 +1,19 @@
+{
+  "name": "leetcood",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js -o --coverage",
+    "test-all": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
+    "watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch -o",
+    "show-jest-help": "node node_modules/jest/bin/jest.js -help"
+  },
+  "author": "Zoffer",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.1.0"
+  },
+  "dependencies": {}
+}
