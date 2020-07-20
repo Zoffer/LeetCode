@@ -54,7 +54,7 @@ class Sudoku {
         let [i, j, possible] = cellInfo;
         while (possible) {
             //截取其中一个可能性
-            const sign = ((possible - 1) & possible) ^ possible;
+            const sign = -possible & possible;
             //填入空格
             this.fillCell(i, j, sign);
             //继续下一个填充
