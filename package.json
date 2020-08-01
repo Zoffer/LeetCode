@@ -7,8 +7,7 @@
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js -o --coverage",
     "test-all": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
-    "watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch -o",
-    "show-jest-help": "node node_modules/jest/bin/jest.js -help"
+    "watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch -o"
   },
   "author": "Zoffer",
   "license": "ISC",
